@@ -3,7 +3,7 @@ package scrabble
 import "strings"
 
 func Score(input string) int{
-    score_map := map[string]int{
+    scoreMap := map[string]int{
         "A": 1,
         "E": 1,
         "I": 1,
@@ -31,9 +31,9 @@ func Score(input string) int{
         "Q": 10,
         "Z": 10,
     }
-    var total_score int = 0
+    var totalScore int
     for _, char := range input {
-        total_score += score_map[strings.ToUpper(string(char))]
+        totalScore += scoreMap[strings.ToUpper(string(char))]
     }
-    return total_score
+    return totalScore
 }

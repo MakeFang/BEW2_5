@@ -3,18 +3,17 @@ package isogram
 import "strings"
 
 func IsIsogram(input string) bool {
-    var input_lower string = strings.ToLower(input)
+    var inputLower string = strings.ToLower(input)
     counts := make(map[rune]int)
-    for _, cur_rune := range input_lower {
-        if string(cur_rune) == "-" || string(cur_rune) == " " {
+    for _, cur_rune := range inputLower {
+        if string(curRune) == "-" || string(curRune) == " " {
             continue
         }
-        _, ok := counts[cur_rune]
+        _, ok := counts[curRune]
         if ok {
             return false
-        } else {
-            counts[cur_rune] += 1
         }
+        counts[curRune] += 1
     }
     return true
 }

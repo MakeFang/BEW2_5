@@ -7,7 +7,7 @@ func Difference(n int) int{
 }
 
 func SquareOfSum(n int) int{
-    var summation float64 = 0
+    var summation float64
     for i := 1; i <= n; i++ {
         summation += float64(i)
     }
@@ -15,7 +15,7 @@ func SquareOfSum(n int) int{
 }
 
 func SumOfSquares(n int) int{
-    var summation float64 = 0
+    var summation float64
     for i := 1; i <= n; i++ {
         summation += math.Pow(float64(i),2)
     }

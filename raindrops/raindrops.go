@@ -3,7 +3,7 @@ package raindrops
 import "strconv"
 
 func Convert(x int) string {
-    var result string = ""
+    var result string
     if x % 3 == 0 {
         result += "Pling"
     }
@@ -15,7 +15,6 @@ func Convert(x int) string {
     }
     if result != "" {
         return result
-    } else {
-        return strconv.Itoa(x)
     }
+    return strconv.Itoa(x)
 }

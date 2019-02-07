@@ -9,7 +9,6 @@ func ShareWith(name string) string {
 	// check if name is empty. If name is empty use "you", otherwise use the name.
 	if name == "" {
 		return "One for you, one for me."
-	} else {
-		return "One for " + name + ", one for me."
 	}
+	return "One for " + name + ", one for me."
 }
